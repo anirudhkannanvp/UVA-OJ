@@ -1,0 +1,29 @@
+while(1):
+    m,n=input().split()
+    m,n=int(m),int(n)
+    #print(n,m)
+    if(n==1 and m==1):
+        break
+    op=""
+    Nm=1
+    Nn=1
+    Nfm=0
+    Nfn=1
+    Nmn=0
+    Nmm=1
+    value=m/n
+    #print(value)
+    while(Nm<m or Nn<n):
+        #print(Nm,Nn)
+        if(value>Nm/Nn):
+            Nfm=Nm
+            Nfn=Nn
+            op+="R"
+        else:
+            Nmm=Nm
+            Nmn=Nn
+            op+="L"
+        Nm=Nfm+Nmm
+        Nn=Nfn+Nmn
+        #print(op)
+    print(op)
